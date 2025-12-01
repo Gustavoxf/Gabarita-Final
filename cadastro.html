@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Gabarita - Cadastro</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    
+    <link rel='stylesheet' type='text/css' media='screen' href='cadastro.css'>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="app-container">
+        <header class="header">
+            <div class="header-content">
+                <div class="logo" id="appTitle">
+                    GABARITA
+                </div>
+            </div>
+        </header>
+
+        <main class="content">
+            <div class="login-content">
+                <div class="login-card">
+                    <div class="form-icon">
+                        ✨
+                    </div>
+                    <h2 class="form-title" id="formTitle">Comece sua jornada</h2>
+                    <p class="form-subtitle" id="formSubtitle">Preencha seus dados para começar</p>
+                    
+                    <form id="cadastroForm" class="login-form">
+                        
+                        <div class="form-group">
+                            <label for="nome" class="form-label">Nome Completo</label>
+                            <input type="text" id="nome" name="nome" class="form-input" placeholder="Digite seu nome completo" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" name="email" class="form-input" placeholder="Digite seu email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="senha" class="form-label">Crie uma Senha</label>
+                            <input type="password" id="senha" name="senha" class="form-input" placeholder="Sua senha segura" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="idade" class="form-label">Idade</label>
+                            <input type="number" id="idade" name="idade" class="form-input" placeholder="Digite sua idade" min="10" max="100" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="serie" class="form-label">Série/Escolaridade</label>
+                            <select id="serie" name="serie" class="form-input" required>
+                                <option value="">Selecione sua série</option>
+                                <option value="6º ano EF">6º ano - Ensino Fundamental</option>
+                                <option value="7º ano EF">7º ano - Ensino Fundamental</option>
+                                <option value="8º ano EF">8º ano - Ensino Fundamental</option>
+                                <option value="9º ano EF">9º ano - Ensino Fundamental</option>
+                                <option value="1º ano EM">1º ano - Ensino Médio</option>
+                                <option value="2º ano EM">2º ano - Ensino Médio</option>
+                                <option value="3º ano EM">3º ano - Ensino Médio</option>
+                                <option value="Ensino Superior">Ensino Superior</option>
+                                <option value="Pós-graduação">Pós-graduação</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="horas" class="form-label">Horas de Estudo Diário</label>
+                            <select id="horas" name="horas" class="form-input" required>
+                                <option value="">Selecione</option>
+                                <option value="1-2 horas">1 a 2 horas</option>
+                                <option value="3-4 horas">3 a 4 horas</option>
+                                <option value="5-6 horas">5 a 6 horas</option>
+                                <option value="7-8 horas">7 a 8 horas</option>
+                                <option value="Mais de 8 horas">Mais de 8 horas</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="concurso" class="form-label">Concurso de Interesse</label>
+                            <select id="concurso" name="concurso" class="form-input" required>
+                                <option value="">Selecione o concurso</option>
+                                <optgroup label="Concursos Militares"> <option value="EsPCEx">EsPCEx - Escola Preparatória de Cadetes do Exército</option> <option value="ESA">ESA - Escola de Sargentos das Armas</option> <option value="AFA">AFA - Academia da Força Aérea</option> <option value="EEAR">EEAR - Escola de Especialistas da Aeronáutica</option> <option value="Escola Naval">Escola Naval</option> <option value="EFOMM">EFOMM - Escola de Formação de Oficiais da Marinha Mercante</option> <option value="IME">IME - Instituto Militar de Engenharia</option> <option value="ITA">ITA - Instituto Tecnológico de Aeronáutica</option> <option value="Colégio Naval">Colégio Naval</option> <option value="CPCAR">CPCAR - Colégio Preparatório de Cadetes do Ar</option> <option value="EPCAr">EPCAr - Escola Preparatória de Cadetes do Ar</option> </optgroup> <optgroup label="Polícias e Bombeiros"> <option value="Polícia Federal">Polícia Federal</option> <option value="Polícia Rodoviária Federal">Polícia Rodoviária Federal - PRF</option> <option value="Polícia Civil">Polícia Civil</option> <option value="Polícia Militar">Polícia Militar</option> <option value="Bombeiros">Corpo de Bombeiros</option> <option value="Polícia Penal">Polícia Penal</option> </optgroup> <optgroup label="Tribunais"> <option value="TJ">Tribunal de Justiça - TJ</option> <option value="TRT">Tribunal Regional do Trabalho - TRT</option> <option value="TRF">Tribunal Regional Federal - TRF</option> <option value="TRE">Tribunal Regional Eleitoral - TRE</option> <option value="STF">Supremo Tribunal Federal - STF</option> <option value="STJ">Superior Tribunal de Justiça - STJ</option> <option value="TST">Tribunal Superior do Trabalho - TST</option> </optgroup> <optgroup label="Federais"> <option value="INSS">INSS - Instituto Nacional do Seguro Social</option> <option value="Receita Federal">Receita Federal</option> <option value="Banco Central">Banco Central - BACEN</option> <option value="CGU">CGU - Controladoria-Geral da União</option> <option value="TCU">TCU - Tribunal de Contas da União</option> <option value="MPU">MPU - Ministério Público da União</option> <option value="IBGE">IBGE - Instituto Brasileiro de Geografia e Estatística</option> </optgroup> <optgroup label="Legislativos"> <option value="Câmara dos Deputados">Câmara dos Deputados</option> <option value="Senado Federal">Senado Federal</option> <option value="Assembleias Legislativas">Assembleias Legislativas</option> </optgroup> <optgroup label="Estaduais e Municipais"> <option value="Prefeituras">Prefeituras</option> <option value="Câmaras Municipais">Câmaras Municipais</option> <option value="Governo Estadual">Secretarias Estaduais</option> <option value="DETRAN">DETRAN</option> </optgroup> <optgroup label="Educação"> <option value="Professor">Professor - Concursos de Magistério</option> <option value="ENEM">ENEM</option> <option value="Vestibulares">Vestibulares</option> </optgroup> <optgroup label="Outros"> <option value="Banco do Brasil">Banco do Brasil</option> <option value="Caixa Econômica">Caixa Econômica Federal</option> <option value="Correios">Correios</option> <option value="Petrobras">Petrobras</option> <option value="Outro">Outro</option> </optgroup>
+                            </select>
+                        </div>
+                        
+                        <p id="mensagem" class="text-center mt-4 text-sm" style="height: 1.5em;"></p>
+
+                        <button type="submit" class="submit-button" id="submitButton">
+                            <span class="button-text">Iniciar Estudos</span>
+                            <span class="button-loader" style="display: none;">⏳ Salvando...</span>
+                        </button>
+                    </form>
+
+                    <div class="success-message" id="successMessage" style="display: none;">
+                        <div class="success-icon">
+                            ✅
+                        </div>
+                        <h3>Cadastro realizado com sucesso!</h3>
+                        <p>Bem-vindo ao Gabarita! Sua jornada começa agora.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <h3 class="footer-title">GABARITA</h3>
+                <p class="footer-text">Transformando sonhos em conquistas através da educação</p>
+                <div class="footer-links">
+                    <a href="#" class="footer-link">Contato</a>
+                    <a href="#" class="footer-link">Ajuda</a>
+                </div>
+                <div class="footer-social">
+                    <span class="social-icon">📘</span>
+                    <span class="social-icon">📸</span>
+                    <span class="social-icon">🐦</span>
+                    <span class="social-icon">💼</span>
+                </div>
+                <p class="footer-text" style="margin-top: 20px; font-size: 12px;">© 2024 Gabarita. Todos os direitos reservados.</p>
+            </div>
+        </footer>
+    </div>
+    
+    <script src="cadastro-script.js"></script> 
+</body>
+</html>
