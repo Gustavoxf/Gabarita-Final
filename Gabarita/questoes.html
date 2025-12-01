@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pt-BR">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gabarita - Questões</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="quest.css">
+  <script src="/_sdk/element_sdk.js"></script>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+ </head>
+ <body>
+  <div class="app-container">
+   <header class="header">
+    <div class="header-content">
+     <div class="logo" id="appTitle">
+       GABARITA
+     </div>
+    </div>
+   </header>
+   <main class="content">
+    <div class="questions-content">
+     <h1 class="page-title" id="pageTitle">Pratique com Questões</h1><!-- Stats Bar -->
+     <div class="stats-bar">
+      <div class="stat-card">
+       <div class="stat-icon">
+        📝
+       </div>
+       <p class="stat-value" id="statAnswered">0</p>
+       <p class="stat-label">Respondidas</p>
+      </div>
+      <div class="stat-card">
+       <div class="stat-icon">
+        ✅
+       </div>
+       <p class="stat-value" id="statCorrect">0</p>
+       <p class="stat-label">Corretas</p>
+      </div>
+      <div class="stat-card">
+       <div class="stat-icon">
+        📊
+       </div>
+       <p class="stat-value" id="statAccuracy">0%</p>
+       <p class="stat-label">Aproveitamento</p>
+      </div>
+     </div><!-- Question Card -->
+     <div class="question-card">
+      <div class="question-header"><span class="question-number" id="questionNumber">Questão 1/5</span> <span class="question-subject" id="questionSubject">Matemática</span>
+      </div>
+      <p class="question-text" id="questionText">Carregando questão...</p>
+      <div class="options-list" id="optionsList"><!-- Options will be loaded here by JavaScript -->
+      </div><!-- Feedback -->
+      <div class="feedback" id="feedback">
+       <div class="feedback-icon" id="feedbackIcon">
+        ✅
+       </div>
+       <h3 class="feedback-title" id="feedbackTitle">Resposta Correta!</h3>
+       <p class="feedback-text" id="feedbackText">Explicação da resposta aparecerá aqui.</p>
+      </div><!-- Action Buttons -->
+      <div class="action-buttons"><button class="btn btn-primary" id="checkBtn" onclick="checkAnswer()" disabled> ✓ Verificar Resposta </button> <button class="btn btn-secondary" id="nextBtn" onclick="nextQuestion()" style="display: none;"> Próxima Questão → </button>
+      </div>
+     </div>
+    </div>
+   </main>
+   <footer class="footer">
+    <div class="footer-content">
+     <h3 class="footer-title"> GABARITA</h3>
+     <p class="footer-text">Transformando sonhos em conquistas através da educação</p>
+     <div class="footer-links"><a href="#" class="footer-link">Termos de Uso</a> <a href="#" class="footer-link">Política de Privacidade</a> <a href="#" class="footer-link">Contato</a> <a href="#" class="footer-link">Ajuda</a>
+     </div>
+     <div class="footer-social"><span class="social-icon">📘</span> <span class="social-icon">📸</span> <span class="social-icon">🐦</span> <span class="social-icon">💼</span>
+     </div>
+     <p class="footer-text" style="margin-top: 20px; font-size: 12px;">© 2024 Gabarita. Todos os direitos reservados.</p>
+    </div>
+   </footer>
+  </div>
+  <script src="questions-script.js"></script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a6b7af2413fdc8f',t:'MTc2NDUxNzYxNC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
